@@ -1,0 +1,27 @@
+[LocalWeather]
+DEBUG = no
+
+[API]
+# Port to listen on for requests (default 8696)
+ENABLE = yes
+# Different Port to Weather 411 and Ecowitt so they can co-exist
+PORT = 8696 
+
+[EcowittDirect]
+# Set your IP Address to the IP Address of your Ecowitt device - best to set to a static least in your router
+IP = 192.168.1.2
+
+# Wait in 10-Second Increments (not minutes as per other weather services for Powerwall-Dashboard)
+WAIT = 1
+TIMEOUT = 10
+
+[InfluxDB]
+# Record data in InfluxDB server 
+ENABLE = yes
+HOST = influxdb
+PORT = 8086
+DB = powerwall
+FIELD = localweather
+# Leave blank if not used
+USERNAME = 
+PASSWORD =
